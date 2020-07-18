@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+
+.checked {
+  color: #ccc;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.fa {
+  margin: 0 3px;
+  color: #bbb;
+}
+
+li>label[for='todo'] {
+  width: 180px;
+}
+
+.m-5{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main-area{
+  display: flex;
+  /*border:1px solid black;*/
+}
+#todo-area{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+#done-area{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.panel{
+  width: 240px;
+}
+
+.cnt{
+  color: cornflowerblue;
+}
