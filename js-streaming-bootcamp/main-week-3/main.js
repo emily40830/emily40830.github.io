@@ -50,7 +50,7 @@ const app = new Vue({
       // 編輯產品，id本身存在
       if (this.product.id) {
         const index = this.items.findIndex(e => {
-          e.id == this.product.id
+          e.id === this.product.id
         });
         this.items[index] = this.product;
 
@@ -66,7 +66,7 @@ const app = new Vue({
       if (this.product.id) {
         const id = this.product.id;
         const index = this.items.findIndex(i => i.id === id);
-        items.splice(index, 1);
+        this.items.splice(index, 1);
         this.product = {};
       };
       $("#delProductModal").modal('hide');
@@ -78,12 +78,12 @@ const app = new Vue({
           $("#productModal").modal("show");
           break;
         case "edit":
-          this.product = product;
+          this.product = Object.assign({}, product);
           $("#productModal").modal("show");
           break;
         case "delete":
           $("#delProductModal").modal("show");
-          this.product = product;
+          this.product = Object.assign({}, product);
           break;
 
       };
