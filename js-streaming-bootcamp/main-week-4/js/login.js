@@ -13,7 +13,7 @@ new Vue({
         .then(res => {
           console.log(res);
           document.cookie = `hexWeek4Token=${res.data.token}; expires=${new Date(res.data.expired * 1000)}; path=/`;
-          window.location = "/products.html";
+          window.location = "./products.html";
         }).catch(err => {
           console.log(err);
         });
