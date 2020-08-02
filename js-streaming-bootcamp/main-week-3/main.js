@@ -49,15 +49,16 @@ const app = new Vue({
     updateItem() {
       // 編輯產品，id本身存在
       if (this.product.id) {
-        const index = this.items.findIndex(e => {
-          e.id === this.product.id
-        });
-        this.items[index] = this.product;
+        const id = this.product.id;
+        const index = this.items.findIndex(item => item.id === id)
+
+        this.items[index] = this.product
 
       } else { // 新增產品，id本身不存在
         const id = new Date().getTime();
         this.product.id = new Date().getTime();
         this.items.push(this.product);
+        console.log(this.product);
       };
       this.product = {};
       $("#productModal").modal('hide');
