@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="app">
+    <form class="form-signin" @submit.prevent="signUp">
+      <div class="wrapper">
+        <div class="title mb-2">
+          <h3>Please SignUp !</h3>
+        </div>
+
+        <div id="setting">
+
+          <h5>Email: </h5>
+          <input type="email" v-model="user.email" name="email" class="input emailInput">
+
+          <h5>Password: </h5>
+          <input type="password" v-model="user.password" name="password" class="input passwordInput">
+          <div></div>
+          <div class="col-2">
+            <button class="btn" id="btnLogin" type="submit">
+              <span>Sign in</span>
+            </button>
+          </div>
+          <div></div>
+
+          <div class="col-2">
+            <button class="btn" id="btnLogout" type="button" @click="signOut">
+              <span>Sign out</span>
+            </button>
+          </div>
+          <div></div>
+
+          <!-- <div class="col-2">
+            <button class="btn" id="btnGetprod" type="button" @click="getData">
+              <span>Get product</span>
+            </button>
+          </div> -->
+
+
+        </div>
+
+      </div>
+
+
+    </form>
+  </div>
+
+
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

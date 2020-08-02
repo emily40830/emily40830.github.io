@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+
+*{
+  box-shadow: border-box;
+}
+html,body 
+{
+  height: 100vh;
+  text-align: center;
+}
+body 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+  margin-top: 20px;
+  display: flex;
+  justify-items: column;
+  flex-flow: column;
+  /* display: block; */
+}
+.title>h3{
+  color: coral;
+}
+h2,h3,h5{
+  font-family: 'Kaushan Script', cursive !important;
+  text-align:center;
+}
+
+#setting{
+  /* width: 200px; */
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 50px 50px 70px 50px 50px;  
+  justify-content: space-around;
+  border-style: outset;
+  border: paleturquoise;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.btn{
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  cursor: pointer;
+  
+  transition: .3s ease-out;
+  -webkit-tap-highlight-color: transparent;
+
+}
+#btnLogin{
+  background-color: coral;
+  color:#0C2B61;
+}
+#btnLogin:hover{
+  background-color: rgb(252, 175, 146);
+}
+#btnLogout{
+  border:2px solid coral;
+  background-color:white;
+  color:#0C2B61;
+}
+#btnLogout:hover{
+  background-color:  rgba(252, 175, 146,0.5);
+}
+#btnGetprod{
+  background-color:#0C2B61;
+  color: aliceblue;
+}
+#btnGetprod:hover{
+  background-color:  rgb(103, 129, 173,0.7);
+}
+
+.input{
+  width: 200px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
